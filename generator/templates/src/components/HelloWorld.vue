@@ -7,9 +7,11 @@ replace:
 
 <%# REPLACE %>
     <div style="display: flex; align-items: center; justify-content: center; margin: 10px;">
-      <input type="button" style="margin: 10px; padding: 5px 10px; background-color: #BDBDBD; color: #212121;" value="click to test $log method" @click="handler">
+      <input type="button" 
+      style="margin: 10px; padding: 5px 10px; background-color: #BDBDBD; color: #212121;" 
+      value="click to test $log method" @click="handler">
     </div>
-  </div>
+  </v-container>
 </template>
 <%# END_REPLACE %>
 
@@ -18,7 +20,7 @@ replace:
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
+    msg: String,
   },
   methods: {
     handler() {
@@ -26,11 +28,11 @@ export default {
         console.log('clicked the testing $log method button');
         console.log('it should log a message to the Stackdriver Logger console');
       } else {
-        console.log(`Only works in development mode`);
+        console.log('Only works in development mode');
       }
       this.$log('testing $log method');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <%# END_REPLACE %>

@@ -12,7 +12,7 @@ const scriptTypes = ['standalone', 'docs', 'sheets', 'slides', 'forms', 'webapp'
   value: name
 }));
 
-let defTimezone = 'America/Chicago';
+let defTimezone = 'America';
 
 module.exports = [
   {
@@ -20,7 +20,7 @@ module.exports = [
     name: 'locale',
     message: 'Select locale',
     choices: locales,
-    default: 'en-us',
+    default: 'en',
     group: 'Locale'
   },
   {
@@ -44,7 +44,7 @@ module.exports = [
     when: answer => answer.createScript,
     message: 'Select script type',
     choices: scriptTypes,
-    default: 'standalone',
+    default: 'webapp',
     group: 'Clasp'
   },
   {
