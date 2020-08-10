@@ -1,0 +1,37 @@
+{
+  "name": "@barecool/vue-cli-plugin-gas-ab",
+  "version": "1.0.0",
+  "description": "Vue Cli script to help in development and testing of GAS in vscode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barecool/vue-cli-plugin-gas-ab.git"
+  },
+  "keywords": [
+    "vue",
+    "plugin",
+    "gas",
+    "google",
+    "apps",
+    "script"
+  ],
+  "author": "Hector R Velez-Couto <barecool@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/barecool/vue-cli-plugin-gas-ab/issues"
+  },
+  "homepage": "https://github.com/barecool/vue-cli-plugin-gas-ab#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "countries-and-timezones": "^2.2.0",
+    "inquirer": "^7.3.3",
+    "ora": "^5.0.0",
+    "spdx-license-list": "^6.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27"
+  }
+}
