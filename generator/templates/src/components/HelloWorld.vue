@@ -1,7 +1,7 @@
 ---
 extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
 replace:
-  - !!js/regexp /<\/v-container>([\s\S]*?)<\/template>/
+  - !!js/regexp /<\/div>([\s\S]*?)<\/template>/
   - !!js/regexp /<script>[^]*?<\/script>/
 ---
 
@@ -11,7 +11,7 @@ replace:
       style="margin: 10px; padding: 5px 10px; background-color: #BDBDBD; color: #212121;"
       value="click to test $log method" @click="handler">
     </div>
-  </v-container>
+  </div>
 </template>
 <%# END_REPLACE %>
 
