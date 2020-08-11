@@ -137,6 +137,7 @@ const authenticate = (context) => {
 };
 
 const setProject = (context, { createScript, scriptId, scriptType, appName }) => {  
+ 
   info('⚙️ Setting up project with Clasp...');
   clearDir(context.dist);
   if (createScript) {
@@ -164,6 +165,7 @@ const adjustSettings = (context, { timeZone, createScript }) => {
 const setup = (context, { appName, createScript, scriptType, scriptId, timeZone }) => {
 
   checkVersion();
+  if(process.env.OFFLINE) return;
   deleteFiles(context.config); // delete .clasp.json if it exists
   authenticate(context);
   setProject(context, { createScript, scriptId, scriptType, appName });

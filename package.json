@@ -1,6 +1,6 @@
 {
   "name": "@barecool/vue-cli-plugin-gas-ab",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Vue Cli script to help in development and testing of GAS in vscode",
   "main": "index.js",
   "scripts": {
