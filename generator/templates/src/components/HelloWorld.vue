@@ -1,14 +1,14 @@
 ---
 extend: '@vue/cli-service/generator/template/src/components/HelloWorld.vue'
-replace: 
-  - !!js/regexp /<\/div>([\s\S]*?)<\/template>/
+replace:
+  - !!js/regexp /<\/v-container>([\s\S]*?)<\/template>/
   - !!js/regexp /<script>[^]*?<\/script>/
 ---
 
 <%# REPLACE %>
     <div style="display: flex; align-items: center; justify-content: center; margin: 10px;">
-      <input type="button" 
-      style="margin: 10px; padding: 5px 10px; background-color: #BDBDBD; color: #212121;" 
+      <input type="button"
+      style="margin: 10px; padding: 5px 10px; background-color: #BDBDBD; color: #212121;"
       value="click to test $log method" @click="handler">
     </div>
   </v-container>

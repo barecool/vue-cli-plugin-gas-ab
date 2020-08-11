@@ -25,7 +25,7 @@ module.exports = (api, { addLicense, licenseName }) => {
             ignored: /node_modules/
           },
           before: function (app, server, compiler) {
-            let googleMock = '@barecool/vue-cli-plugin-gas/google.mock'
+            let googleMock = '@barecool/vue-cli-plugin-gas-ab/google.mock'
             if (googleMock in config.externals) delete config.externals[googleMock]
           }
         };
@@ -39,7 +39,7 @@ module.exports = (api, { addLicense, licenseName }) => {
           'vue-router': 'VueRouter',
           'vuetify/dist/vuetify.min.css': 'undefined',
           'vuetify/lib': 'Vuetify',
-          '@barecool/vue-cli-plugin-gas/google.mock': 'google'
+          '@barecool/vue-cli-plugin-gas-ab/google.mock': 'google'
         };
       },
       chainWebpack: config => {

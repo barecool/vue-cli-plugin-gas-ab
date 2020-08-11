@@ -12,8 +12,8 @@ const updaters = (api, options) => {
     const lines = content.split(/\r?\n/g);
 
     lines[0] = [
-      `import google from '@barecool/vue-cli-plugin-gas/google.mock'`,
-      `import VueGasPlugin from '@barecool/vue-cli-plugin-gas/utils/VueGasPlugin'`,
+      `import google from '@barecool/vue-cli-plugin-gas-ab/google.mock';`,
+      `import VueGasPlugin from '@barecool/vue-cli-plugin-gas-ab/utils/VueGasPlugin';`,
       lines[0]
     ].join('\n');
 
@@ -35,8 +35,8 @@ const updaters = (api, options) => {
       lines[lineIndex - 1],
       `Vue.use(VueGasPlugin, {`,
       `  google,`,
-      `  devMode: process.env.NODE_ENV !== 'production'`,
-      `})`,
+      `  devMode: process.env.NODE_ENV !== 'production',`,
+      `});`,
       ''
     ].join('\n');
 
@@ -130,7 +130,7 @@ const updaters = (api, options) => {
 
     return content + [
       '',
-      '# Added by vue-cli-plugin-gas',
+      '# Added by vue-cli-plugin-gas-ab',
       '.env',
       '*.output.js'
     ].join('\n');

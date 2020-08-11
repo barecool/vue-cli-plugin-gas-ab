@@ -98,9 +98,26 @@ module.exports = (api, options) => {
     
   });
 
+  // TODO: add create project command - without forcing user to run during package install
+  // api.registerCommand('createClasp',
+  //   {
+  //     description: 'Creates GAS script',
+  //     usage: 'vue-cli-service createClasp',
+  //     options: {
+  //       '--type': 'Project Type (webapp, standalone)',
+  //       '--name': 'Project Name'
+  //     }
+  //   },
+  //   args => {
+  //     info('\nCreating Project...\n');
+  //     service.clearDist();
+  //     service.create(args)
+  //   }
+  // );
+
   api.registerCommand('pull',
     {
-      description: 'Pushes the GAS script to Google Drive for testing, without minification',
+      description: 'Pulls the GAS script to Google Drive for testing, without minification',
       usage: 'vue-cli-service pull'
     },
     args => {

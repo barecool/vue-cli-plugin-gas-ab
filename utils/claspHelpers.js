@@ -169,7 +169,7 @@ const setup = (context, { appName, createScript, scriptType, scriptId, timeZone 
   setProject(context, { createScript, scriptId, scriptType, appName });
   adjustSettings(context, { timeZone, createScript });
 
-  return `👏🏽 Project '${appName}' succesfully created.`;
+  return `👏🏽 Project '${appName}' successfully created.`;
 };
 
 class Installer {
@@ -223,6 +223,10 @@ class Service {
 
   clearDist() {
     clearDir(this.context.dist);
+  }
+
+  create(options){
+    return setup(this.context, options)
   }
 
 }

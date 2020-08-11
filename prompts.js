@@ -14,6 +14,7 @@ const scriptTypes = ['standalone', 'docs', 'sheets', 'slides', 'forms', 'webapp'
 
 let defTimezone = 'America';
 
+// TODO: prompts require updating to allow clasp project creation or not during init.
 module.exports = [
   {
     type: 'list',
@@ -23,50 +24,50 @@ module.exports = [
     default: 'en',
     group: 'Locale'
   },
-  {
-    type: 'confirm',
-    name: 'createScript',
-    message: 'Create new script?',
-    default: true,
-    group: 'Clasp'
-  },
-  {
-    type: 'input',
-    name: 'scriptId',
-    when: answer => !answer.createScript,
-    message: 'Inform script Id:',
-    validate: input => /^[\w-]{57}$/.test(input),
-    group: 'Clasp'
-  },
-  {
-    type: 'list',
-    name: 'scriptType',
-    when: answer => answer.createScript,
-    message: 'Select script type',
-    choices: scriptTypes,
-    default: 'webapp',
-    group: 'Clasp'
-  },
-  {
-    type: 'list',
-    name: 'region',
-    when: answer => answer.createScript,
-    message: 'Select a region',
-    validate: input => !!input,
-    default: defaultTimezone.replace(/\/.+$/, ''),
-    choices: regions,
-    pageSize: 10
-  },
-  {
-    type: 'list',
-    name: 'timeZone',
-    when: answer => answer.createScript && answer.region,
-    message: 'Select a timezone',
-    validate: input => !!input,
-    default: defaultTimezone,
-    choices: answers => timezones(answers.region),
-    pageSize: 10,
-  },
+  // {
+  //   type: 'confirm',
+  //   name: 'createScript',
+  //   message: 'Create new script?',
+  //   default: true,
+  //   group: 'Clasp'
+  // },
+  // {
+  //   type: 'input',
+  //   name: 'scriptId',
+  //   when: answer => !answer.createScript,
+  //   message: 'Inform script Id:',
+  //   validate: input => /^[\w-]{57}$/.test(input),
+  //   group: 'Clasp'
+  // },
+  // {
+  //   type: 'list',
+  //   name: 'scriptType',
+  //   when: answer => answer.createScript,
+  //   message: 'Select script type',
+  //   choices: scriptTypes,
+  //   default: 'webapp',
+  //   group: 'Clasp'
+  // },
+  // {
+  //   type: 'list',
+  //   name: 'region',
+  //   when: answer => answer.createScript,
+  //   message: 'Select a region',
+  //   validate: input => !!input,
+  //   default: defaultTimezone.replace(/\/.+$/, ''),
+  //   choices: regions,
+  //   pageSize: 10
+  // },
+  // {
+  //   type: 'list',
+  //   name: 'timeZone',
+  //   when: answer => answer.createScript && answer.region,
+  //   message: 'Select a timezone',
+  //   validate: input => !!input,
+  //   default: defaultTimezone,
+  //   choices: answers => timezones(answers.region),
+  //   pageSize: 10,
+  // },
   {
     type: 'confirm',
     name: 'addLicense',

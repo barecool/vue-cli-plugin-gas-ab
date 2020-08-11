@@ -42,12 +42,13 @@ module.exports = (api, options) => {
       tsConfig: usesTypescript ? 'tsconfig.json' : false
     });
   });
+  
+  // TODO: Update creation hook if user chooses to create clasp project or not. 
+  // api.onCreateComplete(() => {
 
-  api.onCreateComplete(() => {
+  //   const installer = new Installer(api, options);
+  //   api.exitLog(installer.setup());
+  //   installer.open();
 
-    const installer = new Installer(api, options);
-    api.exitLog(installer.setup());
-    installer.open();
-
-  });
+  // });
 }

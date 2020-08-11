@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const ct = require('countries-and-timezones');
 
-const defaultTimezone = 'Etc/GMT';
+const defaultTimezone = 'America';
 
 const regions = Object.keys(ct.getAllTimezones())
   .map(name => name.replace(/\/.+$/, ''))
